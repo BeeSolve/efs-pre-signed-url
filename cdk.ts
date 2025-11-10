@@ -38,10 +38,13 @@ const prefix = "bohbuingu6ahjeFeemiqueewu0phoo8e";
 
 export interface EfsPreSignedUrlProps {
   /**
-   * Your pre-shared secret used for
+   * Your pre-shared secret used for generating HMAC signatures
    */
   readonly preSharedSecret: string;
 
+  /**
+   * AWS Lambda handler options
+   */
   readonly handler?: {
     /**
      * @default 512
@@ -60,7 +63,15 @@ export interface EfsPreSignedUrlProps {
      */
     readonly timeout?: Duration;
   } & Pick<FunctionOptions, "allowPublicSubnet">;
+  /**
+   * VPC in which your EFS is located.
+   */
   readonly vpc: IVpc;
+  /**
+   * Access point for accessing your EFS.
+   *
+   * We recommend to use READ-ONLY access eg. `444` permissions.
+   */
   readonly accessPoint: AccessPoint;
 
   /**
