@@ -1,9 +1,14 @@
 {
   "name": "@beesolve/efs-pre-signed-url",
-  "type": "module",
   "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "aws-cdk": "^2.1031.2",
+    "aws-cdk-lib": "^2.222.0",
+    "constructs": "^10.4.3",
+    "valibot": "^1.1.0"
+  },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.157",
     "@types/node": "^24.10.0"
   },
   "peerDependencies": {
@@ -12,13 +17,5 @@
   "volta": {
     "node": "24.11.0",
     "npm": "11.6.2"
-  },
-  "dependencies": {
-    "aws-cdk": "^2.1031.2",
-    "aws-cdk-lib": "^2.222.0",
-    "aws-lambda": "^1.0.7",
-    "constructs": "^10.4.3",
-    "file-type": "^21.0.0",
-    "valibot": "^1.1.0"
   }
 }
